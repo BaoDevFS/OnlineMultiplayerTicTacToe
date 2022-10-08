@@ -6,7 +6,7 @@ class SocketClient {
 
   SocketClient._internal() {
     socket = IO.io(
-      'http://192.168.1.105:3000',
+      'http://tienichnlu.tk:10015',
       <String, dynamic>{
         'transports': ['websocket'],
         'autoConnect': false

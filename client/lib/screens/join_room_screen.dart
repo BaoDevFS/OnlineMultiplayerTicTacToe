@@ -35,6 +35,7 @@ class _JoinRoomScreenState extends State<JoinRoomScreen> {
   void initState() {
     _socketMethod.joinRoomSuccessListener(
       (data) {
+        print(data);
         Provider.of<RoomDataProvider>(context, listen: false)
             .updateRoomData(data);
         Navigator.of(context).pushNamed(GameScreen.route);
