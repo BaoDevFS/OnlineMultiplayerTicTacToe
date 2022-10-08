@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  node-app:
+    build: .
+    image: node-app
+    container_name: node-app-prod
+    command: npm start
+    environment:
+      - MONGO_URI=mongodb://127.0.0.1:27017/woofie-chat
+      - PORT=10015
+    ports:
+      - 10015:10015
+    volumes:
+      - .:/usr/src/node-app
+      - /usr/src/node-app/node_modules
+    network_mode: host
